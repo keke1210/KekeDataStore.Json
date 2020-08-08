@@ -17,7 +17,7 @@ namespace KekeDataStore.Json
             Validate(FileName);
 
             FileDirectory = Path.GetTempPath();
-
+            
             FilePath = Path.Combine(FileDirectory, FileName);
         }
 
@@ -28,6 +28,8 @@ namespace KekeDataStore.Json
             Validate(FileName);
 
             FileDirectory = baseDirectory;
+
+            Validate(FileDirectory);
 
             FilePath = Path.Combine(FileDirectory, FileName);
         }
@@ -142,9 +144,14 @@ namespace KekeDataStore.Json
             }
         }
 
+        /// <summary>
+        /// Checks if filename is valid
+        /// </summary>
+        /// <param name="filename"></param>
+        /// <returns>void</returns>
         private static void Validate(string filename)
         {
-            if (string.IsNullOrWhiteSpace(filename))
+            if (filename.IsEmpty())
                 throw new ArgumentNullException(nameof(filename));
 
             if (filename.IndexOfAny(Path.GetInvalidPathChars()) > 0)

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace KekeDataStore
+namespace KekeDataStore.Json
 {
     internal class KekeDataStoreException : Exception
     {

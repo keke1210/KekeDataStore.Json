@@ -1,8 +1,7 @@
-﻿using KekeDataStore.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace KekeDataStore
+namespace KekeDataStore.Json
 {
     /// <summary>
     /// File data store contract

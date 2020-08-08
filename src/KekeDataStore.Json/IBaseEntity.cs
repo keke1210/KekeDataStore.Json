@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KekeDataStore
+namespace KekeDataStore.Json
 {
     /// <summary>
     /// Base entity contract. All entities/models should implement this interface.

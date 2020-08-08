@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading;
 
@@ -13,10 +12,10 @@ namespace KekeDataStore.Json
     public sealed class JsonDataStore<T> : IDataStore<T> where T : IBaseEntity
     {
         #region Private Fields
-        private readonly Lazy<Dictionary<string, T>> _data;
-
         private readonly string _fileName;
         private readonly JsonFile<T> _file;
+
+        private readonly Lazy<Dictionary<string, T>> _data;
 
         private readonly ReaderWriterLockSlim _lock = new ReaderWriterLockSlim();
         #endregion
@@ -44,7 +43,6 @@ namespace KekeDataStore.Json
 
             _data = new Lazy<Dictionary<string, T>>(() => _file.LoadFromFile(), true);
         }
-
 
         public JsonDataStore()
         {
