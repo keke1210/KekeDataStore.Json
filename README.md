@@ -1,7 +1,7 @@
+![alt text](https://raw.githubusercontent.com/keke1210/KekeDataStore.Json/master/icon.ico)
 ## KekeDataStore.Json
 
-[![NuGet](https://img.shields.io/nuget/v/KekeDataStore.Json.svg)](https://www.nuget.org/packages/KekeDataStore.Json/)
-[![NuGetCount](https://img.shields.io/nuget/dt/KekeDataStore.Json.svg
+[![NuGet](https://img.shields.io/nuget/v/KekeDataStore.Json.svg)](https://www.nuget.org/packages/KekeDataStore.Json/) [![NuGetCount](https://img.shields.io/nuget/dt/KekeDataStore.Json.svg
 )](https://www.nuget.org/packages/KekeDataStore.Json/)
 
 
@@ -26,13 +26,13 @@ You can install the latest version via [NuGet](https://www.nuget.org/packages/Ke
 
 ```sh
 # Package Manager
-PM> Install-Package KekeDataStore.Json -Version 1.0.0
+PM> Install-Package KekeDataStore.Json -Version 1.0.1.2
 
 # .NET CLI
-> dotnet add package KekeDataStore.Json --version 1.0.0
+> dotnet add package KekeDataStore.Json --version 1.0.1.2
 
 # PackageReference
-<PackageReference Include="KekeDataStore.Json" Version="1.0.0" />
+<PackageReference Include="KekeDataStore.Json" Version="1.0.1.2" />
 ```
 
 ## Usage
