@@ -15,7 +15,7 @@ namespace KekeDataStore.Json
         private readonly string _fileName;
         private readonly JsonFile<T> _file;
 
-        private readonly Lazy<Dictionary<string, T>> _data;
+        private Lazy<Dictionary<string, T>> _data;
 
         private readonly ReaderWriterLockSlim _lock = new ReaderWriterLockSlim();
         #endregion
@@ -32,7 +32,7 @@ namespace KekeDataStore.Json
 
             _file = new JsonFile<T>(directoryPath, $"{_fileName}_Json");
 
-            _data = new Lazy<Dictionary<string, T>>(() => _file.LoadFromFile(), true);
+            _data = new Lazy<Dictionary<string, T>>(() => _file.LoadFromFile());
         }
 
         public JsonDataStore(string fileName)
@@ -41,7 +41,7 @@ namespace KekeDataStore.Json
 
             _file = new JsonFile<T>($"{_fileName}_Json");
 
-            _data = new Lazy<Dictionary<string, T>>(() => _file.LoadFromFile(), true);
+            _data = new Lazy<Dictionary<string, T>>(() => _file.LoadFromFile());
         }
 
         public JsonDataStore()
@@ -50,7 +50,7 @@ namespace KekeDataStore.Json
 
             _file = new JsonFile<T>($"{_fileName}_Json");
 
-            _data = new Lazy<Dictionary<string, T>>(() => _file.LoadFromFile(), true);
+            _data = new Lazy<Dictionary<string, T>>(() => _file.LoadFromFile());
         }
         #endregion
 
@@ -212,6 +212,22 @@ namespace KekeDataStore.Json
             var changesSaved = (bool?)WriteLocked(WriteFunc) ?? false;
 
             return changesSaved;
+        }
+
+
+        internal IMemento<T> Save()
+        {
+            return new ConcreteMemento<T>(_data.Value);
+        }
+
+        internal void Restore(IMemento<T> memento)
+        {
+            if (!(memento is ConcreteMemento<T>))
+            {
+                throw new Exception("Unknown memento class " + memento.ToString());
+            }
+
+            _data = new Lazy<Dictionary<string,T>> (() => memento.Data);
         }
 
         #endregion
