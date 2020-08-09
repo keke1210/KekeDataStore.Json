@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace KekeDataStore.Json
 {
-    public class ConcreteMemento<T> : IMemento<T> where T : IBaseEntity
+    internal class ConcreteMemento<T> : IMemento<T> where T : IBaseEntity
     {
         public ConcreteMemento(Dictionary<string, T> data)
         {

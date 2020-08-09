@@ -133,8 +133,7 @@ namespace KekeDataStore.Json
             {
                 if (id.IsEmptyGuid()) throw new ArgumentNullException(nameof(id));
 
-                T element;
-                var elementExists = _data.Value.TryGetValue(id, out element);
+                var elementExists = _data.Value.TryGetValue(id, out T element);
 
                 if (!elementExists) throw new KekeDataStoreException("Element doesn't exists on the collection!");
             }
@@ -152,8 +151,7 @@ namespace KekeDataStore.Json
             {
                 if (id.IsEmptyGuid()) throw new ArgumentNullException(nameof(id));
 
-                T element;
-                _data.Value.TryGetValue(id, out element);
+                _data.Value.TryGetValue(id, out T element);
 
                 return element;
             }
@@ -169,8 +167,7 @@ namespace KekeDataStore.Json
             {
                 if (entity == null) throw new ArgumentNullException(nameof(entity));
 
-                T item;
-                var userExists = _data.Value.TryGetValue(id, out item);
+                var userExists = _data.Value.TryGetValue(id, out T item);
 
                 if (!userExists)
                     throw new KekeDataStoreException($"Object of type '{typeof(T).Name}' with id: '{id}', doesn't exists on collection!");

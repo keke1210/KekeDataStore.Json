@@ -9,6 +9,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5A2DAE70-3FE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KekeDataStore.Json", "src\KekeDataStore.Json\KekeDataStore.Json.csproj", "{1FDB75EC-8E93-40B6-9849-F376AFB02FEA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "other", "other", "{F81F35E9-2067-4B4D-BFA8-D3346A58DB09}"
+	ProjectSection(SolutionItems) = preProject
+		other\LICENSE = other\LICENSE
+		other\README.html = other\README.html
+		other\README.md = other\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B899DBFA-D9B9-472F-9554-53EF4347CBE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KekeDataStore.Json.Tests", "tests\KekeDataStore.Json.Tests\KekeDataStore.Json.Tests.csproj", "{149B2615-3635-45D4-9654-76E6E90FFB11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestModels", "tests\TestModels\TestModels.csproj", "{1808EAF1-F7B3-4E21-8726-1DB45FCDF2D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +36,22 @@ Global
 		{1FDB75EC-8E93-40B6-9849-F376AFB02FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FDB75EC-8E93-40B6-9849-F376AFB02FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FDB75EC-8E93-40B6-9849-F376AFB02FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149B2615-3635-45D4-9654-76E6E90FFB11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149B2615-3635-45D4-9654-76E6E90FFB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149B2615-3635-45D4-9654-76E6E90FFB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149B2615-3635-45D4-9654-76E6E90FFB11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1808EAF1-F7B3-4E21-8726-1DB45FCDF2D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1808EAF1-F7B3-4E21-8726-1DB45FCDF2D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1808EAF1-F7B3-4E21-8726-1DB45FCDF2D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1808EAF1-F7B3-4E21-8726-1DB45FCDF2D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1FDB75EC-8E93-40B6-9849-F376AFB02FEA} = {5A2DAE70-3FE1-4F97-85E4-3E2E270526E6}
+		{149B2615-3635-45D4-9654-76E6E90FFB11} = {B899DBFA-D9B9-472F-9554-53EF4347CBE1}
+		{1808EAF1-F7B3-4E21-8726-1DB45FCDF2D2} = {B899DBFA-D9B9-472F-9554-53EF4347CBE1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE80059D-CE98-422E-A9FD-8338E03169CF}

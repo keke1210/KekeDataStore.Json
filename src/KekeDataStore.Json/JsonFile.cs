@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Bson;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -37,7 +38,6 @@ namespace KekeDataStore.Json
         public string FileName { get; }
         public string FileDirectory { get; }
         public string FilePath { get; }
-        
 
         // https://stackoverflow.com/questions/32943899/can-i-decompress-and-deserialize-a-file-using-streams/32944462#32944462
 
@@ -59,8 +59,7 @@ namespace KekeDataStore.Json
             {
                 try
                 {
-                    var settings = new JsonSerializerSettings();
-                    SerializeToFileCompressed(data, FilePath, settings);
+                    SerializeToFileCompressed(data, FilePath, null);
                     break;
                 }
                 catch (IOException e) when (e.Message.Contains("because it is being used by another process"))
