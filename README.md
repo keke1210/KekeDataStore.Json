@@ -5,7 +5,7 @@
 )](https://www.nuget.org/packages/KekeDataStore.Json/)
 
 
-Simple data store that saves the data into json Gziped files.
+Simple data store that saves the data into zipped flat files.
 
 * Small API with basic functionality that is needed for handling CRUD operations.
 * Thread-safe.

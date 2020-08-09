@@ -12,7 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "other", "other", "{F81F35E9-2067-4B4D-BFA8-D3346A58DB09}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
-		README.html = README.html
 		README.md = README.md
 	EndProjectSection
 EndProject
