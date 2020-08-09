@@ -12,7 +12,8 @@ Simple data store that saves the data into zipped flat files.
 * Works with strongly typed data
 * Data is stored in separated binary files
   * Easy to initialize
-  * Very fast (Key-Value)
+  * Fast 
+  * Self-contained
   * In-memory db 
   * Easy to edit
   * Good choice for small apps and prototyping
