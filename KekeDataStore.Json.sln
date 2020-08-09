@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KekeDataStore.Json", "src\K
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "other", "other", "{F81F35E9-2067-4B4D-BFA8-D3346A58DB09}"
 	ProjectSection(SolutionItems) = preProject
-		other\LICENSE = other\LICENSE
-		other\README.html = other\README.html
-		other\README.md = other\README.md
+		LICENSE = LICENSE
+		README.html = README.html
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B899DBFA-D9B9-472F-9554-53EF4347CBE1}"
